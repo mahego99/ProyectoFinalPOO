@@ -22,7 +22,7 @@ ESPECIFICACIONES
     -Materias
   -Se deberán manejar excepciones
   -Su código debe validar los inputs del usuario
- 
+  
 ------------------------
 
 
