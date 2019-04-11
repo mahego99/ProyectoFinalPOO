@@ -1,0 +1,72 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class LoginController 
+{
+    
+    public LoginController()
+    {
+        String username;
+        String password;  
+    }
+    
+    //VARIABLES
+        public String line;
+        public BufferedReader bufferedReader;
+        public String user;
+        public String pass;
+        public String list;
+        public String texto;
+        public boolean valid = false;
+        
+    //METODO QUE VALIDA AL USUARIO
+        public boolean validateUser(String username, String password)
+        {
+          try
+          {
+              File myfile = new File("usuarios.txt");
+              FileInputStream fileInputStream = new FileInputStream(myfile);
+              DataInputStream dataInputStream = new DataInputStream(fileInputStream);
+              bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+              valid = false;
+              
+              while((line = bufferedReader.readLine()) != null)
+              {     
+                texto = line;
+                int end = texto.lastIndexOf("(");
+                user = texto.substring(0, end);
+                
+                  
+                    if(user.equals(username))
+                    {
+                          valid = true;
+                          int start = texto.lastIndexOf("(")+1;
+                          end = texto.lastIndexOf(")");
+                          pass = texto.substring(start, end);
+
+                          if(pass.equals(password))
+                          {
+                              valid = true;
+                              System.out.println("Ha ingresado al sistema");
+                              break; 
+                          }
+                          else
+                          {
+                              valid = true;
+                              System.out.println("La contraseña no es valida");
+                          }
+                    }
+              }
+               if(valid==false)
+                    {
+                      System.out.println("El usuario no es valido");
+                    }
+          }
+          catch(IOException e)
+          {
+             e.printStackTrace();
+          }
+        return valid;
+        }
+}
