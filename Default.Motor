@@ -1,0 +1,104 @@
+
+package Default;
+
+import Views.LoginView;
+import Views.OptionsView;
+import Views.AgregarAlumnoView;
+import Views.AgregarEmpleadoView;
+import Views.AgregarMateriaView;
+
+
+public class Motor 
+{
+     //CONSTRUCTOR VACIO
+        public Motor()
+        {
+
+        }
+        
+    //CONSTRUCTOR CON PARAMETROS
+        
+
+        
+   
+        
+    //METODO DE IMPRESION
+        public void doSomething()
+        {
+            lV.show();
+        }
+
+    //METODOS SETS
+        
+        //LOGIN VIEW
+            public void setLoginView(LoginView logV)
+            {
+                lV = logV;
+            }
+
+        //OPTIONS VIEW    
+            public void setOptionsView(OptionsView optV)
+            {
+                oV = optV;
+            }
+        
+        //AGREGAR ALUMNO VIEW
+            public void setAgregarAlumnoView(AgregarAlumnoView agregAlumV)
+            {
+                aAV = agregAlumV;
+            }
+        
+        //AGREGAR EMPLEADO VIEW    
+            public void setAgregarEmpleadoView(AgregarEmpleadoView agregEmplV)
+            {
+                aEV = agregEmplV;
+            }
+
+        //AGREGAR MATERIA    
+            public void setAgregarMateriaView(AgregarMateriaView agregMateV)
+            {
+                aMV = agregMateV;
+            }
+    
+
+    //METODOS GO TO
+        
+        //LOGINVIEW    
+            public void goToLoginView()
+            {
+                lV.show();
+            }
+
+        //OPTIONS VIEW    
+            public void goToOptionsView()
+            {
+                oV.show();
+            }
+            
+        //AGREGAR ALUMNO VIEW    
+            public void goToAgregarAlumnoView()
+            {
+                aAV.show();
+            }
+            
+        //AGREGAR EMPLEADO VIEW
+            public void goToAgregarEmpleadoView()
+            {
+                aEV.show();
+            }
+
+        //AGREGAR MATERIA VIEW    
+            public void goToAgregarMateriaView()
+            {
+                aMV.show();
+            }
+            
+    //VARIABLES 
+        private LoginView lV;
+        private OptionsView oV;
+        private AgregarAlumnoView aAV;
+        private AgregarEmpleadoView aEV;
+        private AgregarMateriaView aMV;
+                
+
+}
