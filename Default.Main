@@ -1,0 +1,43 @@
+
+package Default;
+
+import Views.LoginView;
+import Views.OptionsView;
+import Views.AgregarAlumnoView;
+import Views.AgregarEmpleadoView;
+import Views.AgregarMateriaView;
+
+import Default.Motor;
+
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        //CREACION DE OBJETOS
+            Motor motor = new Motor();
+            LoginView logView = new LoginView();
+            OptionsView optView = new OptionsView();
+            AgregarAlumnoView agAlumnoView = new AgregarAlumnoView();
+            AgregarEmpleadoView agEmpleadoView = new AgregarEmpleadoView();
+            AgregarMateriaView agMateriaView = new AgregarMateriaView();
+        
+        //METODOS SET MOTOR        
+            logView.setMotor(motor);
+            optView.setMotor(motor);
+            agAlumnoView.setMotor(motor);
+            agEmpleadoView.setMotor(motor);
+            agMateriaView.setMotor(motor);
+
+        //METODOS DE SET DE LOS VIEWS    
+            motor.setLoginView(logView);
+            motor.setOptionsView(optView);
+            motor.setAgregarAlumnoView(agAlumnoView);
+            motor.setAgregarEmpleadoView(agEmpleadoView);
+            motor.setAgregarMateriaView(agMateriaView);
+        
+        //METODO INICIAL    
+        motor.doSomething();
+        
+    }
+  
+}
